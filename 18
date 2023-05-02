@@ -1,0 +1,21 @@
+CREATE DATABASE my_first_db;
+
+CREATE TABLE my_first_db.student (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+CREATE TABLE my_first_db.employee (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255),
+  salary INT(6)
+);
+USE my_first_db;
+
+DELETE n1 FROM student n1, student n2 WHERE n1.id > n2.id AND n1.name = n2.name;
+
+USE my_first_db;
+
+INSERT INTO student (id, name) VALUES (01, 'john');
+
+INSERT INTO employee (id, name, salary) VALUES (01, 'john', 1000);
